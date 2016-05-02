@@ -1,0 +1,245 @@
+---------------------------------------------------------------------------------
+--
+-- scene.lua
+--
+---------------------------------------------------------------------------------
+
+local sceneName = ...
+
+local composer = require( "composer" )
+
+-- Load scene with same root filename as this file
+local scene = composer.newScene( sceneName )
+
+---------------------------------------------------------------------------------
+local upArray
+
+local luxor = {}
+local tower = {}
+local worldwide = {}
+local american = {}
+local festival = {}
+local imperial = {}
+local continental = {}
+
+local luxorDown = {}
+local towerDown = {}
+local worldwideDown = {}
+local americanDown = {}
+local festivalDown = {}
+local imperialDown = {}
+local continentalDown = {}
+
+local luxorUp = {}
+local towerUp = {}
+local worldwideUp = {}
+local americanUp = {}
+local festivalUp = {}
+local imperialUp = {}
+local continentalUp = {}
+
+function scene:show( event )
+    local sceneGroup = self.view
+    local phase = event.phase
+    
+
+    
+    local one = "1"
+    local two = "2"
+    local three = "3"
+    local four = "4"
+    local five = "5"
+    local six = "6"
+    
+    local up = "Up"
+    local down = "Down"
+    
+        actingObject = self:getObjectByName( "MidBack" )
+
+        for i = 1, 6, 1 do
+          luxor[i] = self:getObjectByName("L" .. i)
+        end
+        
+        for i = 1, 6, 1 do
+          tower[i] = self:getObjectByName("T" .. i)
+        end
+        
+        for i = 1, 6, 1 do
+          worldwide[i] = self:getObjectByName("W" .. i)
+        end
+        
+        for i = 1, 6, 1 do
+          american[i] = self:getObjectByName("A" .. i)
+        end
+        
+        for i = 1, 6, 1 do
+          festival[i] = self:getObjectByName("F" .. i)
+        end
+        
+        for i = 1, 6, 1 do
+          imperial[i] = self:getObjectByName("I" .. i)
+        end
+        
+        for i = 1, 6, 1 do
+          continental[i] = self:getObjectByName("C" .. i)
+        end
+        
+        
+        for i = 1, 6, 1 do
+          luxorUp[i] = self:getObjectByName("L" .. i)
+        end
+        
+        for i = 1, 6, 1 do
+          towerUp[i] = self:getObjectByName("T" .. i)
+        end
+        
+        for i = 1, 6, 1 do
+          worldwideUp[i] = self:getObjectByName("W" .. i)
+        end
+        
+        for i = 1, 6, 1 do
+          americanUp[i] = self:getObjectByName("A" .. i)
+        end
+        
+        for i = 1, 6, 1 do
+          festivalUp[i] = self:getObjectByName("F" .. i)
+        end
+        
+        for i = 1, 6, 1 do
+          imperialUp[i] = self:getObjectByName("I" .. i)
+        end
+        
+        for i = 1, 6, 1 do
+          continentalUp[i] = self:getObjectByName("C" .. i)
+        end
+        
+        
+        
+        for i = 1, 6, 1 do
+          luxorDown[i] = self:getObjectByName("L" .. i)
+        end
+        
+        for i = 1, 6, 1 do
+          towerDown[i] = self:getObjectByName("T" .. i)
+        end
+        
+        for i = 1, 6, 1 do
+          worldwideDown[i] = self:getObjectByName("W" .. i)
+        end
+        
+        for i = 1, 6, 1 do
+          americanDown[i] = self:getObjectByName("A" .. i)
+        end
+        
+        for i = 1, 6, 1 do
+          festivalDown[i] = self:getObjectByName("F" .. i)
+        end
+        
+        for i = 1, 6, 1 do
+          imperialDown[i] = self:getObjectByName("I" .. i)
+        end
+        
+        for i = 1, 6, 1 do
+          continentalDown[i] = self:getObjectByName("C" .. i)
+        end
+        
+        
+        --	end
+     
+        function increaseStock( event )
+          print("Num " .. event.target.num)
+        end
+
+
+        	-- add the touch event listener to the button
+        for i = 1, 6, 1 do
+          luxorUp[i].num = i
+          luxorUp[i].letter = "L"
+          luxorUp[i]:addEventListener( "touch", increaseStock )
+        end
+        
+        for i = 1, 6, 1 do
+          towerUp[i].num = i
+          towerUp[i].letter = "T"
+          towerUp[i]:addEventListener( "touch", increaseStock )
+        end
+        
+        for i = 1, 6, 1 do
+          worldwideUp[i].num = i
+          worldwideUp[i].letter = "W"
+          worldwideUp[i]:addEventListener( "touch", increaseStock )
+        end
+        
+        for i = 1, 6, 1 do
+          americanUp[i].num = i
+          americanUp[i].letter = "A"
+          americanUp[i]:addEventListener( "touch", increaseStock )
+        end
+        
+        for i = 1, 6, 1 do
+          festivalUp[i].num = i
+          festivalUp[i].letter = "F"
+          festivalUp[i]:addEventListener( "touch", increaseStock )
+        end
+        
+        for i = 1, 6, 1 do
+          imperialUp[i].num = i
+          imperialUp[i].letter = "I"
+          imperialUp[i]:addEventListener( "touch", increaseStock )
+        end
+        
+        for i = 1, 6, 1 do
+          continentalUp[i].num = i
+          continentalUp[i].letter = "C"
+          continentalUp[i]:addEventListener( "touch", increaseStock )
+        end
+        
+        
+        
+        for i = 1, 6, 1 do
+          luxorDown[i].num = i
+          luxorDown[i].letter = "L"
+          luxorDown[i]:addEventListener( "touch", increaseStock )
+        end
+        
+        for i = 1, 6, 1 do
+          towerDown[i].num = i
+          towerDown[i].letter = "T"
+          towerDown[i]:addEventListener( "touch", increaseStock )
+        end
+        
+        for i = 1, 6, 1 do
+          worldwideUp[i].num = i
+          worldwideUp[i].letter = "W"
+          worldwideUp[i]:addEventListener( "touch", increaseStock )
+        end
+        
+        for i = 1, 6, 1 do
+          americanUp[i].num = i
+          americanUp[i].letter = "A"
+          americanUp[i]:addEventListener( "touch", increaseStock )
+        end
+        
+        for i = 1, 6, 1 do
+          festivalUp[i].num = i
+          festivalUp[i].letter = "F"
+          festivalUp[i]:addEventListener( "touch", increaseStock )
+        end
+        
+        for i = 1, 6, 1 do
+          imperialUp[i].num = i
+          imperialUp[i].letter = "I"
+          imperialUp[i]:addEventListener( "touch", increaseStock )
+        end
+        
+        for i = 1, 6, 1 do
+          continentalUp[i].num = i
+          continentalUp[i].letter = "C"
+          continentalUp[i]:addEventListener( "touch", increaseStock )
+        end
+        
+end 
+
+scene:addEventListener( "show", scene )
+
+return scene
